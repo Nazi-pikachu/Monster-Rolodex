@@ -22,7 +22,7 @@ class App extends Component {
   }
   // Arrow functions lexically gives the scope of this to where the fuction/method is declared
   handleChange = (e) => {
-    this.setState({ searchField: e.target.value });
+    this.setState({ searchField: e.target.value, title: e.target.value });
   };
   render() {
     const { monsters, searchField } = this.state;
@@ -31,7 +31,7 @@ class App extends Component {
     });
     return (
       <div className="App">
-        <h1>Monsters Rolodex</h1>
+        <h1>Monster Rolodex</h1>
         <SearchBox
           placeholder="Search Monsters"
           handleChange={this.handleChange}
